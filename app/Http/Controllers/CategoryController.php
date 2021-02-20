@@ -20,7 +20,7 @@ class CategoryController extends Controller
         ]);
 
         $category = new Category();
-        $category->title = $request->input('name');
+        $category->name = $request->input('name');
         $category->save();
         return response()->json($category);
     }
@@ -39,7 +39,7 @@ class CategoryController extends Controller
         ]);
 
         $category = Category::find($id);
-        $category->title = $request->input('name');
+        $category->name = $request->input('name');
         $category->save();
         return response()->json($category);
     }
